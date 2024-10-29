@@ -1,7 +1,7 @@
 package com.lydiasystems.challenge.service;
 
-import com.lydiasystems.challenge.entity.DTO.BankPaymentRequest;
-import com.lydiasystems.challenge.entity.DTO.BankPaymentResponse;
+import com.lydiasystems.challenge.model.dto.BankPaymentRequest;
+import com.lydiasystems.challenge.model.dto.BankPaymentResponse;
 import org.springframework.stereotype.Service;
 
 @Service

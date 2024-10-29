@@ -1,0 +1,25 @@
+spring:
+
+  application:
+    name: challenge
+
+  jpa:
+    hibernate:
+      ddl-auto:
+        update
+    properties:
+      hibernate:
+        dialect:
+          org.hibernate.dialect.PostgreSQL9Dialect
+
+  datasource:
+    driver-class-name:
+      org.postgresql.Driver
+    url:
+      jdbc:postgresql://localhost:5432/challenge
+    username: postgres
+    password: challenge2024
+
+server:
+  servlet:
+    context-path: /api

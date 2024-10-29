@@ -1,6 +1,9 @@
-package com.lydiasystems.challenge.entity;
+package com.lydiasystems.challenge.model.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,6 +12,9 @@ import java.math.BigDecimal;
 
 @Data
 @Entity
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Payment {
 
     @Id
@@ -16,5 +22,4 @@ public class Payment {
     private Long id;
     private BigDecimal price;
     private String bankResponse;
-
 }
