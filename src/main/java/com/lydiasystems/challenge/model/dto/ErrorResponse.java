@@ -11,7 +11,8 @@ import lombok.ToString;
 @ToString
 @EqualsAndHashCode
 @Builder
-public class BankPaymentResponse {
+public class ErrorResponse {
 
-    private final String resultCode;
+    private final String error;
+    private final String message;
 }

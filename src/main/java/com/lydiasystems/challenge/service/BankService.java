@@ -2,21 +2,8 @@ package com.lydiasystems.challenge.service;
 
 import com.lydiasystems.challenge.model.dto.BankPaymentRequest;
 import com.lydiasystems.challenge.model.dto.BankPaymentResponse;
-import org.springframework.stereotype.Service;
 
-@Service
-public class BankService {
+public interface BankService {
 
-    /**
-     * Bank Latency Simulation (avg: 5 seconds)
-     */
-    public BankPaymentResponse pay(BankPaymentRequest request) {
-        try {
-            Thread.sleep(5000);
-            return new BankPaymentResponse("200");
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
+    BankPaymentResponse pay(BankPaymentRequest request);
 }

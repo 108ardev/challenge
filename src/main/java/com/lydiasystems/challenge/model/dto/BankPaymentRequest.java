@@ -6,6 +6,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
+import javax.validation.constraints.Positive;
 import java.math.BigDecimal;
 
 @Getter
@@ -14,5 +15,7 @@ import java.math.BigDecimal;
 @EqualsAndHashCode
 @Builder
 public class BankPaymentRequest {
+
+    @Positive(message = "Product price must be positive")
     private final BigDecimal price;
 }

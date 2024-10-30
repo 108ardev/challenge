@@ -6,7 +6,7 @@ spring:
   jpa:
     hibernate:
       ddl-auto:
-        update
+        none
     properties:
       hibernate:
         dialect:
@@ -19,6 +19,18 @@ spring:
       jdbc:postgresql://localhost:5432/challenge
     username: postgres
     password: challenge2024
+
+config:
+  async-config:
+    core-pool-size: 5
+    max-pool-size: 10
+    queue-capacity: 100
+    thread-name-prefix: "AsyncThread-"
+    await-termination-seconds: 30
+    wait-for-tasks-to-complete-on-shutdown: true
+  retry-config:
+    max-attempts: 5
+    delay: 5000
 
 server:
   servlet:
